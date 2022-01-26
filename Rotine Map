@@ -1,0 +1,23 @@
+<h2 id="pricing-and-billing" class="heading-anchor">Pricing and billing</h2>
+<p>Upgrading a v1 storage account to a general-purpose v2 account is free. You may specify the desired account tier during the upgrade process. If an account tier is not specified on upgrade, the default account tier of the upgraded account will be&nbsp;<code>Hot</code>. However, changing the storage access tier after the upgrade may result in changes to your bill so it is recommended to specify the new account tier during upgrade.</p>
+<p>All storage accounts use a pricing model for blob storage based on the tier of each blob. When using a storage account, the following billing considerations apply:</p>
+<ul>
+<li>
+<p><strong>Storage costs</strong>: In addition to the amount of data stored, the cost of storing data varies depending on the storage access tier. The per-gigabyte cost decreases as the tier gets cooler.</p>
+</li>
+<li>
+<p><strong>Data access costs</strong>: Data access charges increase as the tier gets cooler. For data in the cool and archive storage access tier, you are charged a per-gigabyte data access charge for reads.</p>
+</li>
+<li>
+<p><strong>Transaction costs</strong>: There is a per-transaction charge for all tiers that increases as the tier gets cooler.</p>
+</li>
+<li>
+<p><strong>Geo-Replication data transfer costs</strong>: This charge only applies to accounts with geo-replication configured, including GRS and RA-GRS. Geo-replication data transfer incurs a per-gigabyte charge.</p>
+</li>
+<li>
+<p><strong>Outbound data transfer costs</strong>: Outbound data transfers (data that is transferred out of an Azure region) incur billing for bandwidth usage on a per-gigabyte basis, consistent with general-purpose storage accounts.</p>
+</li>
+<li>
+<p><strong>Changing the storage access tier</strong>: Changing the account storage access tier from cool to hot incurs a charge equal to reading all the data existing in the storage account. However, changing the account access tier from hot to cool incurs a charge equal to writing all the data into the cool tier (GPv2 accounts only).</p>
+</li>
+</ul>
